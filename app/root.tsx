@@ -10,6 +10,11 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {

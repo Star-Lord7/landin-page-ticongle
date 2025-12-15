@@ -2,8 +2,16 @@
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="navbar-container">
-                <span className="navbar-item">
+            <div className="navbar-container justify-around">
+                <div className="navbar-col w-1/3 !justify-start">
+                    {/* Logo */}
+                    <span className="text-2xl font-bold uppercase">
+                        TicongleHub
+                    </span>
+                </div>
+
+                <div className="navbar-col w-1/3">
+                    <span className="navbar-item">
                     <a className="navbar-link" href="/">
                         Inicio
                     </a>
@@ -23,6 +31,8 @@ const Navbar = () => {
                         Nosotros
                     </a>
                 </span>
+                </div>
+                
             </div>
         </nav>
     );

@@ -25,8 +25,10 @@ const ServicesSection = ({ limit=ServicesData.length }) => {
                             <Card
                                 title={item.title}
                                 link={item.link}
+                                withIcon={true}
+                                icon={item.icon}
                             >
-                            <p className="text-justify text-base">
+                            <p className="text-center text-base">
                                 {item.description}
                             </p>
                             </Card>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 import CustomInput from "~/components/main/CustomInput";
 
 const ContactSection = () => {
@@ -43,9 +44,30 @@ const ContactSection = () => {
             });
         }
 
+        if(errorsList.length > 0){
+            Swal.fire({
+                title: 'Error',
+                text: 'Por favor corrige los errores en el formulario',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            });
+
+            setErrors(errorsList);
+            return;
+        }
+
         console.log(errorsList);
 
-        setErrors(errorsList);
+        setErrors([]);
+
+        Swal.fire({
+            title: '¡Gracias por contactarnos!',
+            text: `Nos pondremos en contacto contigo lo antes posible, ${name} ${lastname}`,
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
+
+        event.target.reset(); //Resetea el formulario
 
         return;
 

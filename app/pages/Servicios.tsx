@@ -3,11 +3,12 @@ import imgBanner from "./../images/image.png";
 import ServicesSection from "~/content/home/ServicesSection";
 import Footer from "~/design/Footer";
 import serviceImg from "./../images/serviceInfo.png";
+import Sidebar from "~/design/Sidebar";
 
 export function Servicios() {
     return (
         <>
-            <Navbar/>
+            <Sidebar/>
 
             <header>
                 <img className="" src={imgBanner} alt="" width="100%" />
@@ -32,5 +33,3 @@ export function Servicios() {
         </>
     );
 }
-
-export default Servicios;
